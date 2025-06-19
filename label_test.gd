@@ -56,6 +56,17 @@ func setup_labels():
 				label.add_theme_constant_override("shadow_offset_y",3)
 				label.add_theme_color_override("font_shadow_color", Color(0,0,0, 0.5))
 				children.add_child(label)
+		3: # DEFAULT GODOT LABELS, WITH SHADOWS AND OUTLINE ENABLED
+			for i in 1000:
+				var label: Label = Label.new()
+				label.text = str("Label ", i)
+				label.global_position = Vector2(randf_range(0, win_size.x),randf_range(0, win_size.y))
+				label.add_theme_constant_override("shadow_offset_x",3)
+				label.add_theme_constant_override("shadow_offset_y",3)
+				label.add_theme_constant_override("outline_size",3)
+				label.add_theme_color_override("font_shadow_color", Color(0,0,0, 0.5))
+				label.add_theme_color_override("font_outline_color", Color(1,0,0, 1))
+				children.add_child(label)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action("ui_cancel"):
