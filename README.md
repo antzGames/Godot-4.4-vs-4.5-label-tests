@@ -33,6 +33,6 @@ Three + 1 test modes (outline test added post YouTube video):
 
 ## Screen Capture
 
-Godot 4.4.1 using `Compatibility` Renderer, drawing 1000 Labels with shadows: `21 fps`
+Godot 4.4.1 using `Compatibility` Renderer, drawing 1000 Labels with shadows: `21 fps`, `15789` draw calls!
 
 ![p3](https://github.com/user-attachments/assets/82624bab-de08-4729-a1f6-96123fef924a)
