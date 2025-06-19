@@ -22,8 +22,8 @@ func setup_labels():
 	var info_dict: Dictionary = Engine.get_version_info()
 	info.text = str("Godot V", info_dict["major"], ".", info_dict["minor"], ".", info_dict["patch"], "   Renderer: ", RenderingServer.get_current_rendering_method())
 	
-	var win_size = DisplayServer.screen_get_size()
-	win_size -= Vector2i(91,52) # make 5% smaller
+	var win_size = DisplayServer.window_get_size()
+	win_size *= 0.95 # make 5% smaller
 	
 	match which_mode:
 		0: # NO SHADOWS
