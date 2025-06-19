@@ -26,13 +26,13 @@ func setup_labels():
 	win_size -= Vector2i(91,52) # make 5% smaller
 	
 	match which_mode:
-		0:
+		0: # NO SHADOWS
 			for i in 1000:
 				var label: Label = Label.new()
 				label.text = str("Label ", i)
 				label.global_position = Vector2(randf_range(0, win_size.x),randf_range(0, win_size.y))
 				children.add_child(label)
-		1:
+		1: # FAKE SHADOWS, DRAWS 2 LABELS
 			for i in 1000:
 				var x: float = randf_range(0, win_size.x)
 				var y: float = randf_range(0, win_size.y)
@@ -47,7 +47,7 @@ func setup_labels():
 				label.text = str("Label ", i)
 				label.global_position = Vector2(x,y)
 				children.add_child(label)
-		2:
+		2: # DEFAULT GODOT LABELS, WITH SHADOWS ENABLED
 			for i in 1000:
 				var label: Label = Label.new()
 				label.text = str("Label ", i)
