@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://o8eg0bpdyp2o"]
+
+[ext_resource type="Script" uid="uid://datcjwi0g3ye6" path="res://label_test.gd" id="1_7cguv"]
+
+[node name="LabelTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7cguv")
+
+[node name="Children" type="Node2D" parent="."]
+
+[node name="mode" type="OptionButton" parent="."]
+modulate = Color(1, 0, 0, 1)
+top_level = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -42.0
+offset_right = 150.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+theme_override_font_sizes/font_size = 24
+selected = 0
+item_count = 3
+popup/item_0/text = "No Shadows"
+popup/item_0/id = 0
+popup/item_1/text = "Fake Shadows (Draw 2 Labels)"
+popup/item_1/id = 1
+popup/item_2/text = "DEFAULT Godot Label with Shadows"
+popup/item_2/id = 2
+
+[node name="Info" type="Label" parent="."]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -34.0
+offset_right = 132.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Godot 4.4.1"
+
+[node name="DrawCalls" type="Label" parent="."]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -132.0
+offset_top = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Godot 4.4.1"
+
+[connection signal="item_selected" from="mode" to="." method="_on_has_shadow_item_selected"]
