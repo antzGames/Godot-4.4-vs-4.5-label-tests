@@ -9,14 +9,19 @@ https://github.com/godotengine/godot/pull/103471
 **My System Info:**
 Windows 11 (build 26100) - Multi-window, 2 monitors -  NVIDIA GeForce RTX 3050 (NVIDIA; 32.0.15.7652) - AMD Ryzen 5 5500 (12 threads) - 31.79 GiB memory 
 
+## YouTube Video
+
+Best to see the video of this performance test in action at: https://youtu.be/QzeClGfwYuE
+
 ## Test methodology
 
 Will test both `Compatibility` and `Forward+` renderers.
 
-Three test modes:
+Three + 1 test modes (outline test added post YouTube video):
 - draw 1000 Labels. (No Shadows)
 - draw 1000 Labels another 1000 labels as shadows, to fake shadows. (Fake Shadows)
-- Use built in Godot Label shadow capabilities to draw 1000 Lables. (DEFAULT)
+- Use built in Godot Label shadow capabilities to draw 1000 Lables. (DEFAULT Godot Label with Shadows)
+- Use built in Godot Label shadow AND outline capabilities to draw 1000 Lables. (DEFAULT Godot Label with Shadows and Outline)
 
 ## Compatibility Renderer test results
 
